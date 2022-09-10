@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap NavBar</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+              integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+              crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/gh/fontenele/bootstrap-navbar-dropdowns@5.0.2/dist/css/bootstrap-navbar-dropdowns.min.css"
+              rel="stylesheet">
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+              <script src="https://kit.fontawesome.com/da72d51be1.js" crossorigin="anonymous"></script>
+              
+        <style>
+            html,
+            body {
+                overflow-x: hidden; /* Prevent scroll on narrow devices */
+            }
+
+            body {
+                padding-top: 56px;
+            }
+        
+            .card{
+    box-shadow: -1px 15px 30px -10px black;
+}
+.card-wr-bg:hover{
+    background-color: #f4dd97;
+    cursor: pointer;
+    transition: all 1s ease;
+    transform: scale(1.04);
+}
+.card-s-bg:hover{
+    background-color: #8bdfb8;
+    cursor: pointer;
+    transition: all 1s ease;
+    transform: scale(1.04);
+}
+.card-d-bg:hover{
+    background-color: #f07a85;
+    cursor: pointer;
+    transition: all 1s ease;
+    transform: scale(1.04);
+}
+.card-footer{
+    justify-content:space-around;
+    text-align: center;
+    display: flex;
+    padding: 0px!important;
+}
+.card-footer div{
+    flex-grow: 1 !important;
+    border-right: 1px solid #dbdbdb;
+    padding: 10px 0;
+}
+.card-footer div:last-child{
+border-right: none;    
+}
+
+        </style>
+
+    </head>
+    <body>
+
+      <!--Navbar-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-seedling"></i> PLANTO </a>
+                <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" 
+                        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                               target="_blank">PLANTS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-flip="false"
+                               data-toggle="dropdown" aria-expanded="false">SEEDS</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="" target="_blank">FLOWER SEEDS</a></li>
+                                <li><a class="dropdown-item" href="" target="_blank">VEGETABLE SEEDS</a></li>
+                                <li><a class="dropdown-item" href="" target="_blank">HERB SEEDS</a></li>
+                                <li><a class="dropdown-item" href="" target="_blank">TREE AND GRASS SEEDS</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-flip="false"
+                               data-toggle="dropdown" aria-expanded="false">PLANT CARE</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="" target="_blank">SOIL AND POTS</a></li>
+                                <li><a class="dropdown-item" href="" target="_blank">FERTILISERS</a></li>
+                                <li><a class="dropdown-item" href="" target="_blank">PEST CONTROL</a></li>
+                                <li><a class="dropdown-item" href="" target="_blank">GARDEN AND WATERING TOOLS</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!--Carousal-->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="images/plant1.jpg" class="d-block w-100" style="height: 400px; " alt="Plants">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/plant2.jpg" class="d-block w-100" style="height: 400px;" alt="Plants">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/plant3.jpg" class="d-block w-100" style="height: 400px;" alt="Plants">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/plant4.jpg" class="d-block w-100" style="height: 400px;" alt="Plants">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+
+          <!--Card-->
+          <div class="container py-5">
+            <div class="d-flex justify-content-center">
+              <div class="col-11">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col mt-3">
+                    <div class="card border-warning card-wr-bg"> <img src="images/plant5.jpg" class="card-img-top" alt="...">
+                      <div class="card-body d-grid gap-3">
+                        <h5 class="card-title text-center text-capitalize">Native Plants for Birds</h5>
+                        <p class="card-text text-center p-0 pb-3">Order beautiful premium quality live plants online for your home garden from Ugaoo & get it delivered safely to your doorstep. We have a wide variety of indoor low-maintenance, air-purifying, flowering, medicinal plants, etc that are grown in our greenhouses under expert care. Explore our entire range of live plants online.</p>
+                      </div>
+                      <div class="card-footer text-light bg-warning"> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card border-success card-s-bg "> <img src="images/plant6.jpg" class="card-img-top" alt="...">
+                      <div class="card-body d-grid gap-3">
+                        <h5 class="card-title text-center text-capitalize">LushGreen Adenium Plant</h5>
+                        <p class="card-text text-center p-0 pb-3">Adenium, also called the Desert Rose, strikes a mid-point between quintessential outdoor plants and indoor flowering plants. They bloom in hues of red, pink, white and yellow and can be planted in regular-sized pots. If you have direct sunlight in your home during summers, the Desert Rose will fit right in because it needs to be exposed to 6 hours or more of sunlight. </p>
+                          
+                      </div>
+                      <div class="card-footer bg-success text-light">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mt-3">
+                    <div class="card border-danger card-d-bg"> <img src="images/plant7.jpg" class="card-img-top" alt="..." style="height: 110px;">
+                      <div class="card-body d-grid gap-3">
+                        <h5 class="card-title text-center text-capitalize">Climbing Vines</h5>
+                          <p class="card-text text-center p-0 pb-3">Climbing vines help direct the eye up to encompass many architectural details in the landscape. They also may produce flowers, fruit, attract butterflies or pollinators, feed birds, shade an area or simply cover up a failing fence or other structure. Most of the vines for zone 9 are tough and need little extra care outside of watering and training them to a trellis or arbor.
+                            </p>
+                          
+                      </div>
+                      <div class="card-footer bg-danger text-light"> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!--Navtabs-->
+            <div class="d-flex justify-content-center" style="margin-bottom: 40px;">
+              <div class="col-12">
+            <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-tabs" id="myTab" role="tablist" style="background-color: #f07a85;">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#html" type="button" role="tab"
+                    aria-controls="home" aria-selected="true" style="color: black;">INDOOR PLANTS </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#css" type="button" role="tab"
+                    aria-controls="profile" aria-selected="false" style="color: black;">MEDICINAl PLANTS</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#js" type="button" role="tab"
+                    aria-controls="contact" aria-selected="false" style="color: black;">FRUIT PLANTS
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body" style="background-color: lightpink;">
+              <div class="tab-content" id="myTabContent" style="margin-bottom: 30px;">
+                <div class="tab-pane fade show active" id="html" role="tabpanel" aria-labelledby="home-tab">
+                  <h3>INDOOR PLANTS</h3>
+                  <p>indoor plants grow inside as the climate can be controlled and environment can be manipulated to suit the plant requirements.</p>
+                </div>
+                <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="profile-tab">
+                  <h3>MEDICINAl PLANTS</h3>
+                  <p>The plants that possess therapeutic properties or exert beneficial pharmacological effect on the human or animal body.</p>
+                </div>
+                <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="contact-tab">
+                  <h3>FRUIT PLANTS</h3>
+                  <p>In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+          
+
+
+            <div class="container">
+              <h2 style="text-align: center; color: blue;">QUALITY/RATING OF MOST SELLING PLANTS</h2>
+                  
+          
+          <table class="table table-striped table-class hidden-sm hidden-xs table-bordered" id= "responside-table-demo" style="text-align: center; border-color: darkgreen;" >
+            <tr>
+              <th>PLANT NAME</th>
+              <th>Quantity/Rating</th>
+            </tr>
+            <tr>
+              <td>Adeniums</td>
+              <td>Good and Nice Smelling = 9/10</td>
+             
+            </tr>
+            <tr>
+              <td>Adenium Arabicum</td>
+              <td>Great for gardening= 9/10</td>
+             
+            </tr>
+            <tr>
+              <td>Crassula Capitella Campfire</td>
+              <td>Good texture = 10/10</td>
+             
+            </tr>
+            <tr>
+              <td>Aboli - Arka Ambara</td>
+              <td>Colourfull = 9/10</td>
+           
+            </tr>
+            <tr>
+              <td>Arctic Snow Bush-Kutajah</td>
+              <td>Bright = 10/10</td>
+            
+            </tr>
+            <tr>
+              <td>Crape Jasmine -Chandni</td>
+              <td>Atractive = 10/10</td>
+         
+            </tr>                
+          </table>
+          
+          
+          </div> <!-- 		End of Container -->
+          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+          
+                  <script type="text/javascript" src="js/responsive-table/js.js"></script>
+                  <script type="text/javascript">
+                 
+                  responsiveTable ('#responside-table-demo');
+          
+          
+                  balanceSize();	
+                  </script>
+
+            
+            
+            
+          <!--Footer-->
+            <footer class="text-center text-white w-100" style="background-color:lawngreen">
+              <div class="container">
+                  <div class="row text-center d-flex justify-content-center pt-5">
+                    <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!" class="text-black-50">ABOUS US</a>
+                      </h6>
+                    </div>
+                    <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!" class="text-black-50"> PLANTS PRODUCTS</a>
+                      </h6>
+                    </div>
+                    <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!" class="text-black-50">HELP</a>
+                      </h6>
+                    </div>
+                    <div class="col-md-2">
+                      <h6 class="text-uppercase font-weight-bold">
+                        <a href="#!" class="text-black-50">CONTACT</a>
+                      </h6>
+                    </div>
+                  
+                  </div>
+          
+                <hr class="my-5" />
+          
+ 
+                <section class="mb-5">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <p class="text-black-50">
+                        Plants are an incredibly important kingdom of organisms. They are multicellular organisms with the amazing ability to make their own food from carbon dioxide in the atmosphere. They provide the foundation of many food webs and animal life would not exist if plants were not around. 
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="text-center mb-5 text-black-50">
+                  <a href="" class="text-black-50 me-4">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="" class="text-black-50 me-4">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="" class="text-black-50 me-4">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a href="" class="text-black-50 me-4">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="" class="text-black-50 me-4">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="" class="text-black-50 me-4">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </section>
+  
+              </div>
+  
+              <div
+                   class="text-center p-3 text-black-50"
+                   style="background-color: rgba(0, 0, 0, 0.2)"
+                   >
+                © 2020 Copyright: <i class="fa-solid fa-seedling"></i> PLANTO (RACHANA NAYAK)
+               
+              </div>
+            </footer>
+            
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+                integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fontenele/bootstrap-navbar-dropdowns@5.0.2/dist/js/bootstrap-navbar-dropdowns.min.js"></script>
+        <script>
+            $('.navbar').navbarDropdown({theme: 'bs5', trigger: 'mouseover'});
+        </script>
+    </body>
+</html>
